@@ -48,7 +48,7 @@ body {
 	justify-content: space-between;
 }
 
-/* sending teh logo to the left */
+/* sending the logo to the left */
 .logo {
 	width: 20%;
 	height: 120px;
@@ -84,7 +84,7 @@ body {
 }
 
 
-/* limiting the navigation to make it fit within 80% of the width */
+/* limiting the navigation to make it fit within 100% of the width */
 nav {
 	width: 100%;
 	height: 100%;
@@ -93,7 +93,7 @@ nav {
 	justify-content: space-between;
 }
 
-/* flex div used new */
+/* flex div used "new" */
 .flex {
 	display: flex;
 	gap: var(--gap, 3rem)
@@ -103,11 +103,12 @@ nav {
 	display: none;
 }
 
+/* spacing and adjusting the nav bar */
 .primary-navigation {
 	list-style: none;
 	padding: 0;
 	margin-top: 0;
-	margin-right: 20px;
+	margin-right: 40px;
 	float: right;
 	justify-content: spaced-evenly;
 	display: flex;
@@ -135,8 +136,7 @@ ul {}
 	color: #eee;
 }
 
-/* list hover adjustments */
-/* nav ul li  */
+/* list or anchor hover adjustments */
 .primary-navigation a:hover {
 	font-size: 23px;
 	transition: 0.2s all;
@@ -145,7 +145,7 @@ ul {}
 	letter-spacing: 1px;
 }
 
-/* working on a single letter to make it a button */
+/* working on a single word to make it a button */
 .contactbtn {
 	background-color: #eee;
 	padding: 10px 20px;
@@ -154,6 +154,7 @@ ul {}
 	color: #ff0505 !important;
 }
 
+/* button hover property */
 .contactbtn:hover {
 	background-color: #eee;
 	padding: 10px 28px;
@@ -163,7 +164,7 @@ ul {}
 	color: #ff0505 !important;
 }
 
-/* hero height,length,image and background */
+/* hero height,length and background */
 .hero {
 	width: 100%;
 	height: 540px;
@@ -177,7 +178,7 @@ ul {}
 	opacity: 0.8; */
 }
 
-/* text div */
+/* hero text div// limiting */
 .herotext {
 	width: 80%;
 	height: auto;
@@ -206,10 +207,11 @@ ul {}
 	margin: 0 auto 70px auto;
 }
 
-/* project h1 */
+/* project title */
 .projecth {
 	width: 25%;
 	margin: auto;
+	padding-left: 200px;
 	align-content: center;
 	font-family: sans-serif;
 	color: #21053b;
@@ -217,7 +219,7 @@ ul {}
 	padding-bottom: 1rem;
 }
 
-/* body idk?? */
+/* body content padding and alignment */
 .bodycontent {
 	padding: 15px;
 	margin-top: 16px;
@@ -232,7 +234,7 @@ ul {}
 h2.about {
 	text-align: center;
 	margin-top: 20px;
-	font-family: sans-serif;
+	font-family: sans-serif, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
 	font-size: 40px;
 	padding-bottom: 15px;
 	color: #21053b;
@@ -498,7 +500,7 @@ footer {
 
 /* icons div size and also even space between*/
 .socials {
-	width: 8%;
+	width: 10%;
 	display: flex;
 	justify-content: space-between;
 	margin-right: 20px;
@@ -519,6 +521,12 @@ footer {
 	transition: 0.4s all;
 	transform: scale(1.3)
 }
+
+.git {
+	padding-right: 20px;
+}
+
+/* mobile support */
 
 /* a fall-back for browsers that daoesnt support blur */
 @supports (backdrop-filter: blur(.75rem)) {
@@ -541,7 +549,8 @@ footer {
 /* adjusting the sliding out menu (when visible) for the maximum possible screen */
 @media (max-width: 35em) {
 	.primary-navigation {
-		position: fixed;
+		position: absolute;
+		height: 457px;
 		z-index: 1000;
 		--gap: 3rem;
 		inset: 0 0 0 40%;
@@ -552,7 +561,9 @@ footer {
 	}
 
 	/* for the min width- hidden menu */
-	. @media (min-width: 35em);{
+	. @media (min-width: 35em);
+
+		{
 		.primary-navigation {
 			padding-block: 2rem;
 			padding-inline: clamp(3rem, 5vw, 10rem);
@@ -560,7 +571,7 @@ footer {
 	}
 
 	.primary-navigation[data-visible="true"] {
-		transform: translateX(10%);
+		transform: translateX(16%);
 	}
 
 	/* importing and adjusting the button */
@@ -595,23 +606,38 @@ footer {
 
 @media screen and (max-width: 35em) {
 
+	.whole-img {
+		height: 700px;
+	}
+
+	.projecth {
+		width: 25%;
+		margin: auto;
+		padding-left: 10px;
+		align-content: center;
+		font-family: sans-serif;
+		color: #21053b;
+		margin-top: 30px;
+		padding-bottom: 1rem;
+	}
+
 	.logo img {
-			width: auto;
-			height: 100%;
-			display: flex;
-			float: left;
-			animation: rotation 5s infinite linear;
+		width: auto;
+		height: 100%;
+		display: flex;
+		float: left;
+		animation: rotation 5s infinite linear;
+	}
+
+	@keyframes rotation {
+		from {
+			transform: rotate(0deg);
 		}
-	
-		@keyframes rotation {
-			from {
-				transform: rotate(0deg);
-			}
-	
-			to {
-				transform: rotate(360deg);
-			}
+
+		to {
+			transform: rotate(360deg);
 		}
+	}
 
 	/* adjusting the hero text to fit a smaller screen */
 	.herotext h1 {
@@ -626,7 +652,9 @@ footer {
 		flex-wrap: wrap;
 	}
 
-	.p1,.p2,.p3 {
+	.p1,
+	.p2,
+	.p3 {
 		width: 100%;
 		height: 300px;
 		margin-bottom: 100px;
@@ -644,6 +672,7 @@ footer {
 	/* contact me section adjustment */
 	.join {
 		width: 100%;
+		height: 400px;
 	}
 
 	.data {
@@ -664,7 +693,7 @@ footer {
 	}
 
 	.button {
-		width: 50%;
+		width: 70%;
 		font-size: 18px;
 	}
 
