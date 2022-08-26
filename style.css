@@ -115,17 +115,9 @@ nav {
 	background-color: hsl(0, 0%, 0%, .5);
 }
 
-
-/* making the nav objects align horizontally */
-/* nav ul {
-	width: 100%;
-	display: flex;
-	justify-content: space-evenly; */
-
-}
-
 /* removing the list buttons */
 ul {}
+
 
 /* modifying the list letters */
 .primary-navigation {
@@ -170,12 +162,15 @@ ul {}
 	height: 540px;
 	max-height: 560px;
 	margin-bottom: 50px;
+
+	/* alternative : start */
 	/* background-image: url(images/spiral.jpg);
 	background-position: top;
 	background-size: cover;
 	background-color: #430e74;
 	background-blend-mode: overlay;
 	opacity: 0.8; */
+	/* : end */
 }
 
 /* hero text div// limiting */
@@ -256,7 +251,7 @@ p {
 	font-family: cursive, sans-serif;
 }
 
-/* class of the first div in the projects */
+/* class of the first div in the projects/ project images */
 .p1 {
 	width: 30%;
 	height: 300px;
@@ -287,7 +282,7 @@ p {
 	box-shadow: 4px 4px 5px #a69b9b;
 }
 
-/* hover of the div in the projects */
+/* hover of the div in the projects/ project images */
 .p1:hover {
 	width: 30%;
 	height: 300px;
@@ -354,7 +349,7 @@ p {
 	margin-top: -3px;
 }
 
-/* dashes under the projects */
+/* dashes under the projects images */
 .line2 {
 	width: 10%;
 	height: 3px;
@@ -429,12 +424,13 @@ p {
 }
 
 /* no space inorder to work */
+/* inputed text */
 input[type='email'] {
 	font-size: 18px;
 	color: #999
 }
 
-/* button rad, width, alignment and properties of text and object, border */
+/* submit button rad, width, alignment and properties of text and object, border */
 .button {
 	width: 25%;
 	height: 50px;
@@ -467,18 +463,6 @@ input[type='email'] {
 	font-family: sans-serif;
 }
 
-/* .hover_img {
-	display: none;
-}
-
-.button:hover .hover_img {
-	display: inline-block;
-}
-
-.button:hover .txt {
-	display: none;
-} */
-
 /* footer div color,width, horizontal alignment , while keeping an even space between*/
 footer {
 	width: 100%;
@@ -489,7 +473,7 @@ footer {
 	justify-content: space-between;
 }
 
-/* cp adjustment */
+/* copyright text adjustment */
 .copyright {
 	font-weight: 400px;
 	color: #7e7c7c;
@@ -528,7 +512,7 @@ footer {
 
 /* mobile support */
 
-/* a fall-back for browsers that daoesnt support blur */
+/* a fall-back for browsers that doesn't support blur */
 @supports (backdrop-filter: blur(.75rem)) {
 	.primary-navigation {
 		background-color: hsl(0, 0%, 100%, .2);
@@ -540,13 +524,9 @@ footer {
 	font-weight: 700;
 }
 
-/* @media (max-width: 35rem){
-	.slide{
-		transform: translateX()
-	}
-} */
 
 /* adjusting the sliding out menu (when visible) for the maximum possible screen */
+/* 120% translateX is how far the menu goes off the screen */
 @media (max-width: 35em) {
 	.primary-navigation {
 		position: absolute;
@@ -562,14 +542,15 @@ footer {
 
 	/* for the min width- hidden menu */
 	. @media (min-width: 35em);
-
-		{
+{
+	/* active horizontal movement of the navigation elements when resizing the browser window */
 		.primary-navigation {
 			padding-block: 2rem;
 			padding-inline: clamp(3rem, 5vw, 10rem);
 		}
 	}
 
+	/* how much the menu pops out when clicked */
 	.primary-navigation[data-visible="true"] {
 		transform: translateX(16%);
 	}
@@ -596,7 +577,7 @@ footer {
 	}
 }
 
-/* expansion and contraction of teh menu */
+/* expansion and contraction of the menu */
 @media (min-width: 35em) and (max-width: 55em) {
 	.primary-navigation a>[aria-hidden] {
 		display: hidden;
@@ -605,11 +586,12 @@ footer {
 
 
 @media screen and (max-width: 35em) {
-
+/* making the image fit the height of the screen */
 	.whole-img {
 		height: 700px;
 	}
 
+/* project text adjustment */
 	.projecth {
 		width: 25%;
 		margin: auto;
@@ -628,7 +610,7 @@ footer {
 		float: left;
 		animation: rotation 5s infinite linear;
 	}
-
+/* rotation of the logo when overed upon using the rotation/animation att. right on top of this code */
 	@keyframes rotation {
 		from {
 			transform: rotate(0deg);
@@ -647,7 +629,7 @@ footer {
 		margin-top: 3rem;
 	}
 
-	/* adjusting the projects list */
+	/* adjusting the projects list to appear on top of eachother */
 	.projects {
 		flex-wrap: wrap;
 	}
@@ -704,6 +686,8 @@ footer {
 	}
 
 	/* always apply the wrap attribute for the div element */
+
+	/* aligning the footer elements to the center and above eachother */
 	footer {
 		flex-wrap: wrap;
 	}
