@@ -181,7 +181,8 @@ ul {}
 }
 
 /* adjusting the hero text properties */
-.herotext h1 {
+/* fixed text */
+/* .herotext h1 {
 	width: 50%;
 	margin-top: 10%;
 	float: left;
@@ -193,7 +194,43 @@ ul {}
 	text-transform: uppercase;
 	line-height: 90px;
 	letter-spacing: 1px;
+} */
+
+/* sliding animation for the hero text */
+.ftxt{
+	width: 50%;
+		margin-top: 5%;
+		float: left;
+		font-family: 'Courier New', Courier, monospace;
+		font-size: 70px;
+		text-align: right;
+		color: #fff;
+		font-weight: bolder;
+		text-transform: uppercase;
+		line-height: 90px;
+		letter-spacing: 1px;
+		animation: slide 5s ease-out;
 }
+
+
+@keyframes slide {
+	0% {
+		margin-left: -800px;
+	}
+
+	20% {
+		margin-left: -800px;
+	}
+
+	35% {
+		margin-left: 0px;
+	}
+
+	100% {
+		margin-left: 0px;
+	}
+}
+
 
 /* div of body */
 .bodycontent {
@@ -538,6 +575,9 @@ footer {
 		padding: min(20vh, 10rem) 2rem;
 		transform: translateX(120%);
 		transition: transform 350ms ease-out;
+	}
+	.ftxt{
+		margin-top: 1%;
 	}
 
 	/* for the min width- hidden menu */
