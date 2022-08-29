@@ -34,6 +34,8 @@ body {
 	background-image: url(images/spiral.jpg);
 	background-position: top;
 	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 	/* background-color: #430e74;
 		background-blend-mode: overlay;
 		opacity: 0.8; */
@@ -197,7 +199,7 @@ ul {}
 } */
 
 /* sliding animation for the hero text */
-.ftxt{
+.first-txt{
 	width: 50%;
 		margin-top: 5%;
 		float: left;
@@ -211,7 +213,6 @@ ul {}
 		letter-spacing: 1px;
 		animation: slide 5s ease-out;
 }
-
 
 @keyframes slide {
 	0% {
@@ -230,7 +231,6 @@ ul {}
 		margin-left: 0px;
 	}
 }
-
 
 /* div of body */
 .bodycontent {
@@ -576,14 +576,14 @@ footer {
 		transform: translateX(120%);
 		transition: transform 350ms ease-out;
 	}
-	.ftxt{
+	.first-txt{
 		margin-top: 1%;
 	}
 
 	/* for the min width- hidden menu */
 	. @media (min-width: 35em);
 {
-	/* active horizontal movement of the navigation elements when resizing the browser window */
+	/* active horizontal movement of the navigation elements while resizing the browser window */
 		.primary-navigation {
 			padding-block: 2rem;
 			padding-inline: clamp(3rem, 5vw, 10rem);
